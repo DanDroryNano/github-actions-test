@@ -38,7 +38,7 @@ jobs:
         id: custom-action
         uses: ./.github/actions/customAction
         with:
-          list-of-numbers: "[1, 2, 3]"
+          list-of-numbers: "1,2,3"
 
       - name: output from custom action
         run: |
