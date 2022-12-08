@@ -32,7 +32,7 @@ jobs:
 
       - name: execute custom action
         id: custom-action
-        uses: ./.github/actions/customAction/action.yml
+        uses: ./.github/actions/customAction
         with:
           list-of-numbers: "[1, 2, 3]"
 
