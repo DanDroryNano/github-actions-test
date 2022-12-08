@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         node-version: [14.x, 16.x, 18.x]
-        client: [client1, client2]
+        client: [client1, client2, iqbals-mining-operation]
     steps:
       - uses: actions/checkout@v2
 
@@ -19,6 +19,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+
       - name: run matrix
         run: |
           echo "Node version: ${{ matrix.node-version }}"
