@@ -2,15 +2,15 @@ name: Manual deploy
 
 on:
   workflow_dispatch:
-#    inputs:
-#      client:
-#        description: 'Client name'
-#        required: true
-#        default: 'client1'
-#      node-version:
-#        description: 'Node version'
-#        required: true
-#        default: '14.x'
+    inputs:
+      client:
+        description: 'Client name'
+        required: true
+        default: 'client1'
+      node-version:
+        description: 'Node version'
+        required: true
+        default: '14.x'
 
 jobs:
   pull_request_job:
