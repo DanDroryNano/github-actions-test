@@ -1,0 +1,18 @@
+name: 'Custom action'
+description: 'Takes a list of numbers and returns a random number'
+inputs:
+  list-of-numbers:
+    description: 'A list of numbers'
+    required: true
+outputs:
+  number:
+    description: 'random number'
+    value: ${{ steps.random-number.outputs.number }}
+runs:
+  using: "composite"
+  steps:
+    - id: random-number
+      run: echo "number=$(echo )" >> $GITHUB_OUTPUT
+      shell: bash
+#  using: 'node16'
+#  main: 'index.js'

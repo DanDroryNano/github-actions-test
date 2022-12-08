@@ -1,0 +1,22 @@
+name: On Pr
+
+on:
+  pull_request:
+    branches:
+      - main
+      - feature/*
+
+jobs:
+  pull_request_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+
+      - name: execute script
+        run: |
+          echo "executing this script"

@@ -1,0 +1,31 @@
+name: Manual deploy
+
+on:
+  workflow_dispatch:
+#    inputs:
+#      client:
+#        description: 'Client name'
+#        required: true
+#        default: 'client1'
+#      node-version:
+#        description: 'Node version'
+#        required: true
+#        default: '14.x'
+
+jobs:
+  pull_request_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+#          node-version: ${{ github.event.inputs.node-version }}
+
+      - name: execute script
+        run: |
+          echo "running script"
+#          echo "Node version: ${{ github.event.inputs.node-version }}"
+#          echo "Client: ${{ github.event.inputs.client }}"
