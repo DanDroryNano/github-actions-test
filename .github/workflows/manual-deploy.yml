@@ -30,6 +30,10 @@ jobs:
 #          echo "Node version: ${{ github.event.inputs.node-version }}"
 #          echo "Client: ${{ github.event.inputs.client }}"
 
+      - name: install dependencies
+        run: |
+          npm install
+
       - name: execute custom action
         id: custom-action
         uses: ./.github/actions/customAction
