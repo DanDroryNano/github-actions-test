@@ -21,14 +21,14 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 16.x
-#          node-version: ${{ github.event.inputs.node-version }}
+#          node-version: 16.x
+          node-version: ${{ github.event.inputs.node-version }}
 
       - name: execute script
         run: |
           echo "running script"
-#          echo "Node version: ${{ github.event.inputs.node-version }}"
-#          echo "Client: ${{ github.event.inputs.client }}"
+          echo "Node version: ${{ github.event.inputs.node-version }}"
+          echo "Client: ${{ github.event.inputs.client }}"
 
       - name: install dependencies
         run: |
