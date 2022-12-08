@@ -32,11 +32,10 @@ jobs:
 
       - name: execute custom action
         id: custom-action
-        uses: ./.github/actions/customAction
-        inputs:
+        uses: ./.github/actions/customAction/action.yml
+        with:
           list-of-numbers: [1, 2, 3]
 
       - name: output from custom action
-        needs: custom-action
         run: |
           echo "output from custom action: ${{ steps.custom-action.outputs.number }}"
